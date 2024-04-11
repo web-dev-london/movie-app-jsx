@@ -1,25 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
+import Movies from './components/movies';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import React, { Component } from 'react';
+
+class App extends Component {
+  /* Life cycle hooks 
+   Mounting phase
+  */
+  constructor() {
+    super();
+    console.log('app - constructor');
+  }
+
+  componentDidMount() {
+    console.log('app - mounted ');
+  }
+
+  render() {
+    console.log('app - rendered');
+    return (
+      <>
+        <main className='container'>
+          <Movies />
+        </main>
+      </>
+    );
+  }
 }
 
 export default App;
